@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Title</title>
-</head>
-<body>
-<h1>Witaj w chmurze!</h1>
-<p style="font-size:20px;">Zobacz co my tutaj mamy</p>
-</body>
-</html>
+{% extends "layout1.html" %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<p>To jest moje portfolio.</p>
+<p style="color: red;">(Wersja testowa, bardzo surowa)</p>
+<p>Jestem studentem 2 roku WSB, kierunek informatyka, licencjat</p>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "layout1.html" %}
+{% block title %}
+Galereja zdjęć
+{% endblock %}
+{% block content %}
+<p>Tu mam kilka zdjęć, które robiłem:</p>
+<img src = "{{ url_for('static', filename='1.jpg')}}">
+<img src = "{{ url_for('static', filename='2.jpg')}}">
+<img src = "{{ url_for('static', filename='3.jpg')}}">
+<img src = "{{ url_for('static', filename='4.jpg')}}">
+<img src = "{{ url_for('static', filename='5.jpg')}}">
+<img src = "{{ url_for('static', filename='6.jpg')}}">
+<img src = "{{ url_for('static', filename='7.jpg')}}">
+<img src = "{{ url_for('static', filename='8.jpg')}}">
+{% endblock %}
