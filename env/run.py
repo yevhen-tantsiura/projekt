@@ -13,5 +13,4 @@ def help():
     return "help me"
 
 
-if __name__ == '__main__':
     app.run()
