@@ -9,23 +9,30 @@
 }
 body
 {
-	overflow: hidden;
+	min-height: 100vh;
+	overflow:auto;
 }
 main
 {
-	overflow-y: auto;
-	height: 920px;
+	min-height: 100vh;
 	background-color: rgb(80, 80, 80);
-
 }
 main p
 {
 	color:white;
 }
+footer
+{
+	width:100vw;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 10px 10px 10px
+}
 
 li.nav-item.active
 {
-	font-size: 22px;
+	font-size: 20px;
 	font-weight: bold;
 }
 li.nav-item
