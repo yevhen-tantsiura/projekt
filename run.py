@@ -1,25 +1,25 @@
 from flask import Flask
 from flask import request
 from flask import render_template
-from datetime import datetime
+from flask import abort, redirect, url_for, make_response
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def home():
-    return render_template("index.html")
+    return render_template('index.html')
 
-@app.route("/gallery/")
+@app.route('/gallery/')
 def gallery():
-    return render_template ("gallery.html")
+    return render_template ('gallery.html')
 
-@app.route("/about/")
+@app.route('/about/')
 def about():
-    return render_template("about.html")
+    return render_template('about.html')
 
-@app.route("/contact/")
+@app.route('/contact/')
 def contact():
-    return render_template("contact.html")
+    return render_template('contact.html')
 
 @app.route('/error_denied')
 def error_denied():

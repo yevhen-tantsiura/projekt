@@ -1,9 +1,18 @@
-{% extends "layout1.html" %}
+{% extends "layout.html" %}
 {% block title %}
 About
 {% endblock %}
 {% block content %}
-<p>Nazywam się Yevhen Tantsiura, jestem z Ukrainy, mam 18 lat, studiuję na drugim roku na WSB. </p>
-<p>Moje hobby to fotografia, programowanie.</p>
-<p>Mieszkam we Wrocławiu.</p>
+<div class="container">
+    <div class="head">
+        <h1>About me </h1>
+    <div class="row justify-content-center">
+        <img style="margin-bottom: 10px;" class="col-sm-1" src="{{ url_for('static', filename='png.png') }}">
+    </div>
+
+    <h2>
+        Nazywam się Yevhen Tantsiura. Jestem z Ukrainy. Mieszkam we Wrocławiu. Jetsem studentem WSB, 2 rok, informatyka. Moje hobby to programowanie, fotografia. Mój aparat to Nikon D3000.
+    </h2>
+    </div>
+</div>
 {% endblock %}

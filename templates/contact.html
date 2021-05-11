@@ -1,10 +1,28 @@
-{% extends "layout1.html" %}
+{% extends "layout.html" %}
 {% block title %}
 Contact ze mną
 {% endblock %}
 {% block content %}
-<p>Tu można ze mną skontaktować się mailowo:</p>
-<p style="color: red;">(Będzie uruchomiona aplikacja mailowa na twoim komputerze) </p>
-<p style="color: red;">Możesz również skopiować adres mailowy w menu prawym przyciskiem myszy</p>
-<p><a href ="mailto:tantsiura_69225@cloud.wsb.wroclaw.pl">Wyślij mi maila</a></p>
+<div class="container">
+    <form class="form-signin">
+        <div class="head">
+          <h1 class="h3 mb-3 fw-normal ">Wyślij mi wiadomość</h1>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingNickname" placeholder="Nickname">
+            <label for="floatingNickname">Imię</label>
+          </div>
+        <div class="form-floating">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Adres email</label>
+        </div>
+        <div class="form-floating">
+          <textarea class="form-control" id="floatingComment" placeholder="Comment"></textarea>
+          <label for="floatingComment">Treść wiadomości</label>
+        </div>
+    
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Wyślij</button>
+      </form>
+      <p class="repositories">Mój reposytorium: <span class="link"><a href="https://github.com/yevhen-tantsiura/projekt">Github</a></span></p>
+    </div>
 {% endblock %}
