@@ -21,12 +21,12 @@ class AzureDB:
     
     def azureAddData(self, name, mail, text):
         date = datetime.utcnow() 
-        self.cursor.execute("INSERT INTO data (name, mail, text, date) values (?,?,?,?)", (name, mail, text, date))
+        self.cursor.execute("INSERT INTO data (name, mail, text, date) values (?,?,?,?)", [name, mail, text, date])
         self.conn.commit()
 
     def azureGetData(self):
         try:
-            self.cursor.execute("SELECT * FROM data")
+            self.cursor.execute("SELECT * FROM data WHERE id IS NOT NULL")
             data = self.cursor.fetchall()
             return data
         except pypyodbc.DatabaseError as exception:
@@ -35,17 +35,17 @@ class AzureDB:
             exit (1)
     
     def azureDeleteData(self, id):
-        self.cursor.execute("DELETE FROM data WHERE id=?", (id,))
+        self.cursor.execute("DELETE FROM data WHERE id=?", [id])
         self.conn.commit()
     
     def azureEditData(self, text, id):
         date = datetime.utcnow()
-        self.cursor.execute("UPDATE data SET text=?, date=? WHERE id=?", (text, date, id))
+        self.cursor.execute("UPDATE data SET text=?, date=? WHERE id=?", [text, date, id])
         self.conn.commit()
     
     def azureGetDataid(self, id):
         try:
-            self.cursor.execute("SELECT * FROM data WHERE id=?", (id,))
+            self.cursor.execute("SELECT * FROM data WHERE id=?", [id])
             data = self.cursor.fetchall()
             return data
         except pypyodbc.DatabaseError as exception:
