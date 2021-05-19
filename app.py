@@ -2,11 +2,10 @@ from flask import Flask
 from flask import request
 from flask import render_template
 from flask import abort, redirect, url_for, make_response,flash
-from pypyodbc import BinaryNull
 from AzureDB import AzureDB
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'ahsuiaysi7yahdisadisadsidus'
+app.config['SECRET_KEY'] = 'ahsuiaysi7yahdisadisadsidusjfdjifjejofejjolifjdlmji4oijr3oep3eo3'
 
 @app.route('/')
 def home():
