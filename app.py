@@ -5,8 +5,7 @@ from flask import abort, redirect, url_for, make_response,flash
 from AzureDB import AzureDB
 
 app = Flask(__name__)
-WTF_CSRF_ENABLED = True
-app.config['SECRET_KEY'] = 'ahsuiaysi7yahdisadisadsidusjfdjifjejofejjolifjdlmji4oijr3oep3eo3'
+app.secret_key = "secret key"
 
 @app.route('/')
 def home():
