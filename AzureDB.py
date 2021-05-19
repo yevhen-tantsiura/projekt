@@ -21,12 +21,12 @@ class AzureDB:
     
     def azureAddData(self, name, mail, text):
         date = datetime.utcnow() 
-        self.cursor.execute("INSERT into data (name, mail, text, date) values (?,?,?,?)", (name, mail, text, date))
+        self.cursor.execute("INSERT INTO data (name, mail, text, date) values (?,?,?,?)", (name, mail, text, date))
         self.conn.commit()
 
     def azureGetData(self):
         try:
-            self.cursor.execute("SELECT * from data")
+            self.cursor.execute("SELECT * FROM data")
             data = self.cursor.fetchall()
             return data
         except pypyodbc.DatabaseError as exception:
@@ -45,7 +45,7 @@ class AzureDB:
     
     def azureGetDataid(self, id):
         try:
-            self.cursor.execute("SELECT * from data WHERE id=?", (id,))
+            self.cursor.execute("SELECT * FROM data WHERE id=?", (id,))
             data = self.cursor.fetchall()
             return data
         except pypyodbc.DatabaseError as exception:
