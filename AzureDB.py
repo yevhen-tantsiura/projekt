@@ -3,7 +3,7 @@ import azurecred
 from datetime import datetime
 
 class AzureDB:
-    dsn='DRIVER='+azurecred.AZDBDRIVER+';SERVER='+azurecred.AZDBSERVER+';PORT=1433;DATABASE='+azurecred.AZDBNAME+';UID='+azurecred.AZDBUSER+';PWD='+ azurecred.AZDBPW+';Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30'
+    dsn='DRIVER='+azurecred.AZDBDRIVER+';SERVER='+azurecred.AZDBSERVER+';DATABASE='+azurecred.AZDBNAME+';UID='+azurecred.AZDBUSER+';PWD='+ azurecred.AZDBPW
     
     def __init__(self):
         self.conn = pypyodbc.connect(self.dsn)
@@ -26,7 +26,7 @@ class AzureDB:
 
     def azureGetData(self):
         try:
-            self.cursor.execute("SELECT * FROM data WHERE id IS NOT NULL")
+            self.cursor.execute("SELECT * FROM data ORDER BY id DESC")
             data = self.cursor.fetchall()
             return data
         except pypyodbc.DatabaseError as exception:
