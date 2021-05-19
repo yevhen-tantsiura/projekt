@@ -31,10 +31,13 @@ def contact():
     
     return render_template('contact.html')
 
-@app.route("/comments")
+@app.route('/comments', methods=['POST','GET'])
 def comments():
-    data = AzureDB().azureGetData()
-    return render_template("comments.html", data = data)
+    if request.method == "GET":
+        data = AzureDB().azureGetData()
+        return render_template("comments.html", data = data)
+    else: 
+        return 'ERROR'
 
 @app.route('/comments/<int:id>/delete')
 def delete_comm(id):

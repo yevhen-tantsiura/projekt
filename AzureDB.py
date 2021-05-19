@@ -26,7 +26,7 @@ class AzureDB:
 
     def azureGetData(self):
         try:
-            self.cursor.execute("SELECT * from data")
+            self.cursor.execute("SELECT id,name,mail,text,date from data")
             data = self.cursor.fetchall()
             return data
         except pypyodbc.DatabaseError as exception:
