@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}
+Lista komentarzy
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="head">
+        <h1>Lista komentarzy</h1>
+        <br />
+    </div>
+    {% for comments in data %}
+    <div style="background-color: rgb(63, 63, 63); border: black;" class="alert alert-info">
+        <h2 style="color: white;">{{ comments.name }}</h2>
+        <p>{{ comments.text }}</p>
+        <p><b> Date: {{ comments.date }}</b></p>
+        <a href="/comments/{{ comments.id }}/delete" class="btn btn-danger">Delete</a>
+        <a href="/comments/{{ comments.id }}/edit" class="btn btn-success">Edit</a>
+    </div>
+    {% else %}
+    <div class="head">
+        <h1>
+            Niestety, nie ma żadnych komentarzy
+        </h1>
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}

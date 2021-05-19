@@ -1,28 +1,32 @@
 {% extends "layout.html" %}
 {% block title %}
-Contact ze mną
+Komentuj
 {% endblock %}
 {% block content %}
 <div class="container">
-    <form class="form-signin">
-        <div class="head">
-          <h1 class="h3 mb-3 fw-normal ">Wyślij mi wiadomość</h1>
-        </div>
-        <div class="form-floating">
-            <input type="text" class="form-control" id="Name" >
-            <label for="Name">Imię</label>
-          </div>
-        <div class="form-floating">
-          <input type="email" class="form-control" id="Email" >
-          <label for="Email">Adres email</label>
-        </div>
-        <div class="form-floating">
-          <input type="text" class="form-control" id="Comment" >
-          <label for="Comment">Treść wiadomości</label>
-        </div>
-    
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Wyślij</button>
-      </form>
-      <p class="repositories">Mój reposytorium: <span class="link"><a href="https://github.com/yevhen-tantsiura/projekt">Github</a></span></p>
+  <div class="head">
+    <h1 class="h3 mb-3 fw-normal ">Zostaw swój komentarz</h1>
+  </div>
+  {% for cat, msg in get_flashed_messages(True) %}
+  <div class="flash {{cat}}">{{msg}}</div>
+  {% endfor %}  
+  
+  <form class="form-signin" action ="{{ url_for('contact') }}" method="POST">
+    <div class="form-floating">
+      <input type="text" class="form-control" name="name" id="Name" >
+      <label for="Name">Imię</label>
     </div>
+    <div class="form-floating">
+      <input type="email" class="form-control" name="mail" id="Email" >
+      <label for="Email">Adres email</label>
+    </div>
+    <div class="form-floating">
+      <textarea type="text" class="form-control" name="text" id="Comment" ></textarea>
+      <label for="Comment">Treść wiadomości</label>
+    </div>
+    
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Wyślij</button>
+  </form>
+  <p class="repositories">Mój reposytorium: <span class="link"><a href="https://github.com/yevhen-tantsiura/projekt">Github</a></span></p>
+  </div>
 {% endblock %}
