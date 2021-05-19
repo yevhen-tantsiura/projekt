@@ -3,7 +3,7 @@ import azurecred
 from datetime import datetime
 
 class AzureDB:
-    dsn='DRIVER='+azurecred.AZDBDRIVER+';SERVER='+azurecred.AZDBSERVER+';PORT=1433;DATABASE='+azurecred.AZDBNAME+';UID='+azurecred.AZDBUSER+';PWD='+ azurecred.AZDBPW
+    dsn='DRIVER='+azurecred.AZDBDRIVER+';SERVER='+azurecred.AZDBSERVER+';PORT=1433;DATABASE='+azurecred.AZDBNAME+';UID='+azurecred.AZDBUSER+';PWD='+ azurecred.AZDBPW+';Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30'
     
     def __init__(self):
         self.conn = pypyodbc.connect(self.dsn)
