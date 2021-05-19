@@ -26,7 +26,7 @@ class AzureDB:
 
     def azureGetData(self):
         try:
-            self.cursor.execute("SELECT * from data ORDER BY date DESC")
+            self.cursor.execute("SELECT * from data")
             data = self.cursor.fetchall()
             return data
         except pypyodbc.DatabaseError as exception:
