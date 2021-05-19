@@ -29,17 +29,17 @@ footer
 	font-weight: bold;
 	padding: 10px 10px 10px 10px
 }
-
-li.nav-item.active
+.nav-item.active
 {
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: bold;
+	padding-right: 20px;
 }
-li.nav-item
+.nav-item
 {
-	font-size: 20px;
+	font-size: 22px;
+	padding-right: 20px;
 }
-
 .head > h1 
 {
 	font-size: 42px;
@@ -140,7 +140,6 @@ footer p
 .form-signin label {
 	color:white;
 }
-
 .carousel {
 	margin-bottom: 4rem;
   }
@@ -148,7 +147,6 @@ footer p
 	bottom: 3rem;
 	z-index: 10;
 }
-  
 .carousel-item {
 	height: 32rem;
 }

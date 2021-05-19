@@ -6,7 +6,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css', v=70)}}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css', v=77)}}" />
         <link rel="stylesheet" href="{{ url_for('static', filename='lightboxcss.css') }}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -27,7 +27,7 @@
       <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="{{ url_for('home') }}">Strona domowa <span class="sr-only"></span></a>
+            <a class="nav-link" href="{{ url_for('home') }}">Strona główna <span class="sr-only"></span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('gallery') }}">Galeria zdjęć</a>
@@ -36,7 +36,7 @@
             <a class="nav-link" href="{{ url_for('about') }}">O mnie</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('contact') }}">Zostaw swój komentarz</a>
+            <a class="nav-link" href="{{ url_for('contact') }}">Komentuj</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('comments') }}">Lista komentarzy</a>
