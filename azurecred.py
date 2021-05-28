@@ -1,5 +1,5 @@
-AZDBSERVER = 'tcp:wsbpiacsql.database.windows.net' 
-AZDBNAME = 'WsbPIACsql' 
+AZDBSERVER = 'wsbazuredb.database.windows.net' 
+AZDBNAME = 'WSBAzureDB' 
 AZDBUSER = 'Yevhen' 
 AZDBPW = 'lenovoa316i.' 
 AZDBDRIVER = '{ODBC Driver 17 for SQL Server}' 
