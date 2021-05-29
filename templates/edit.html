@@ -10,7 +10,6 @@ Edytowanie komentarza
   {% for cat, msg in get_flashed_messages(True) %}
   <div class="flash {{cat}}">{{msg}}</div>
   {% endfor %}  
-  
   <form class="form-signin"  method="POST">
     <div class="form-floating">
         <textarea type="text" class="form-control" name="text" id="Comment" ></textarea>

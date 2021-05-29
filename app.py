@@ -19,9 +19,7 @@ github_blueprint = make_github_blueprint(
 app.register_blueprint(github_blueprint, url_prefix='/login')
 
 
-
 @app.route('/')
-
 def github_login():
     if not github.authorized:
         return redirect(url_for('github.login'))
@@ -32,10 +30,6 @@ def github_login():
             #return '<h1>Your Github name is {}'.format(account_info_json['login'])
             return render_template('index.html')
     return '<h1>Request failed!</h1>'   
-
-
-
-    
 
 @app.route('/gallery')
 def gallery():
